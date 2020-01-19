@@ -12,7 +12,7 @@ jobs:
     - name: Setup protoc
       uses: arduino/setup-protoc@v1.1.0
     - name: Compile .proto to cpp and python
-      run: protoc --cpp_out=. --python_out=. sensors.proto
+      run: protoc --cpp_out=./compiled_cpp --python_out=./compiled_python sensors.proto
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
