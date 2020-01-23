@@ -2,37 +2,16 @@ syntax = "proto3";
 
 package sensors;
 
-message SensorGPS {
-    string device = 1;
-    string type = 2;
-    double timestamp = 3;
-    DataGPS data = 4;
-}
-
 message DataGPS {
     float latitude = 1;
     float longitude = 2;
     float height = 3;
 }
 
-message SensorIMU {
-    string device = 1;
-    string type = 2;
-    double timestamp = 3;
-    DataIMU data = 4;
-}
-
 message DataIMU {
     float x = 1;
     float y = 2;
     float z = 3;
-}
-
-message SensorDHT {
-    string device = 1;
-    string type = 2;
-    double timestamp = 3;
-    DataDHT data = 4;
 }
 
 message DataDHT {
